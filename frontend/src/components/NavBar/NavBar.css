@@ -92,13 +92,15 @@ header .nav-btn{
     font-size: 25px;
     margin-top: 50px;
     font-weight: bold;
-    border: solid 1.5px black;
-    padding: 10px 50px;
+    border: solid 1px black;
+    padding: 20px 60px;
+    background-color: transparent;
     
 }
 .contact:hover{
     transition: 0.2s;
     font-size: 27px;
-    background-color: rgba(222, 221, 221, 0.287);
+    background-color: rgb(42, 42, 42);
+    color: white;
 
 }

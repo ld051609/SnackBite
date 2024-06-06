@@ -1,14 +1,13 @@
 import React from 'react'
-import './Profile.css'
+import './Contact.css'
 import NavBar from '../NavBar/NavBar'
-const Profile = () => {
+const Contact = () => {
   return (
     <div>
       <NavBar/>
-      Profile
-
+      Contact
     </div>
   )
 }
 
-export default Profile
+export default Contact
