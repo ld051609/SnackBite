@@ -5,14 +5,6 @@ const SnackSchema = new mongoose.Schema({
         required: true,
         unique: true,
     },
-    description:{
-        type: String,
-        required: true,
-    },
-    origin:{
-        type: String,
-        required: true,
-    },
     image:{
         type: String,
         required: true,
@@ -23,7 +15,7 @@ const SnackSchema = new mongoose.Schema({
     },
     reviews:[{
         type: mongoose.Schema.Types.ObjectId,
-        ref: 'Review'
+        ref: 'Review',
     }]
     
 }, {timestamps: true})

@@ -1,0 +1,6 @@
+.snack-card-container{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px; /* Optional: adds spacing between grid items */
+    padding: 10px; /* Optional: adds padding around the grid container */
+}
