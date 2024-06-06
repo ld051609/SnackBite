@@ -1,0 +1,14 @@
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: borderbox;
+}
+body{
+  min-height: 100vh;    
+  font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+
+}
+a{
+  text-decoration: none;
+  color: inherit;
+}
