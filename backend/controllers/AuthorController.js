@@ -50,3 +50,26 @@ module.exports.Login = async (req, res, next) => {
         console.log(error);
     }
 }
+
+module.exports.getPersonInfo = async (req, res, next) => {
+    try{
+        const user = await User.findById(req.user._id);
+        res.status(200).json({message: 'User fetched successfully', success: true, user});
+        next();
+    } catch(error){
+        console.log(error);
+    }
+}
+module.exports.addWishlist = async (req, res, next) => {
+    try{
+        const {snack} = req.body;
+        const user = await User.findById(req.user._id);
+        if(!user){
+            return res.json({message: 'User not found'});
+        }
+        user.wishlist.push(snack);
+        user.save();
+        res.status(200).json({message: 'Wishlist updated successfully', success: true, user});
+        next();
+    }
+}

@@ -6,20 +6,20 @@ import SnackCard from '../../components/SnackCard/SnackCard'
 import Snacks from './sample.json'
 const About = () => {
   const [allSnacks, setAllSnacks] = useState([]); 
-  // const fetchAllSnacks = async () => {
-  //   try {
-  //     const res = await fetch('');
-  //     const jsonData = await res.json(); 
-  //     setAllSnacks(jsonData);
-  //     console.log(jsonData);
-  //   } catch (error) {
-  //     console.log(error)
+  const fetchAllSnacks = async () => {
+    try {
+      const res = await fetch('https://localhost:5000/snacks');
+      const jsonData = await res.json(); 
+      setAllSnacks(jsonData);
+      console.log(jsonData);
+    } catch (error) {
+      console.log(error)
       
-  //   }
-  // }
-  // useEffect(() => {
-  //   fetchAllSnacks();
-  // }, []);
+    }
+  }
+  useEffect(() => {
+    fetchAllSnacks();
+  }, []);
   useEffect(() =>{
     setAllSnacks(Snacks);
   },[])
