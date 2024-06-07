@@ -1,9 +1,12 @@
 import React from 'react'
 import './SnackCard.css'
+import {useNavigate} from 'react-router-dom'
 const SnackCard = ({snack}) => {
+  const navigate = useNavigate()
   function handleOnClick() {
-    console.log('Review button clicked')
+    navigate(`/about/${snack.name}`)
   }
+
   return (
     <div className='card'>
         <img src={snack.img} alt='snack' className='card-img'/>

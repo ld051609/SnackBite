@@ -1,22 +1,23 @@
 const mongoose = require('mongoose');
 const bcrypt = require('bcryptjs');
 const UserSchema = new mongoose.Schema({
-    name:{
+    username:{
         type: String,
-        required: true,
+        required: [true, 'Your username is required'],
         unique: true,
     },
     email:{
         type: String,
-        required: true,
+        required: [true, 'Your email is required'],
         unique: true,
     },
     password:{
         type: String,
-        required: true,
+        required: [true, 'Your password is required'],
     },
-    profilePicture:{
-        type: String,
+    createdAt:{
+        type: Date,
+        default: new Date(),
     },
     wishlist: [{
         type: mongoose.Schema.Types.ObjectId,
@@ -26,7 +27,7 @@ const UserSchema = new mongoose.Schema({
         type: mongoose.Schema.Types.ObjectId,
         ref: 'Review',
     }]
-}, {timestamps: true})
+})
 
 // Hash the password before saving the user
 UserSchema.pre('save', async function(next){
