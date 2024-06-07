@@ -1,0 +1,44 @@
+.contact-h2{
+    margin-top: 70px;
+    margin-left: 15px;
+    margin-right: 15px;
+    border-radius: 10px;
+    padding: 20px 20px;
+    font-size: 30px;
+
+    
+}
+.contact-p, .get-in-touch-p, .connect-p{
+    margin: 20px 50px;
+    font-size: 18px;
+    background-color: rgb(238, 237, 235);
+    border-radius: 10px;
+    padding: 20px 20px;
+
+}
+.get-in-touch-h2{
+    margin: 20px 15px;
+    border-radius: 10px;
+    padding: 20px 20px;
+    font-size: 30px;
+}
+li{
+    list-style-type: none;
+    margin: 15px;
+    margin-right: 50px;
+    margin-left: 50px;
+    font-size: 18px;
+    background-color: rgb(0, 0, 0);
+    color: white;
+    border-radius: 10px;
+    padding: 10px 10px;
+
+}
+.connect-h2 {
+    margin: 20px 15px;
+    border-radius: 10px;
+    padding: 20px 20px;
+    font-size: 30px;
+
+
+}
