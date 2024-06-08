@@ -6,9 +6,9 @@ const SnackCard = ({snack}) => {
   function handleOnClick() {
     navigate(`/about/${snack.name}`)
   }
-  function handleWishList() {
+  async function handleWishList() {
     try {
-      const res = fetch('https://localhost:5000/wishlist', {
+      const res = await fetch('http://localhost:5000/api/wishlist',{
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',

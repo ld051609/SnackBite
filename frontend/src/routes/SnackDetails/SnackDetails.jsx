@@ -8,7 +8,7 @@ const SnackDetails = () => {
 
     const fetchAllReview = async () => {
         try {
-            const res = await fetch('https://localhost:5000/reviews', {
+            const res = await fetch('http://localhost:5000/api/reviews', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',

@@ -4,7 +4,7 @@ import { GoSearch } from "react-icons/go";
 
 const Searchbar = () => {
     const [data, setData] = useState([]);
-    const [query, setQuery] = useState('');
+    const [query, setQuery] = useState('http://localhost:5000/api/snacks');
     const fetchData = async () => {
         try{
             const res = await fetch('');

@@ -9,7 +9,7 @@ const Profile = () => {
   const [wishlist, setWishlist] = React.useState([])
   async function fetchUserData() {
     try {
-      const response = await fetch('https://localhost:5000/person', {
+      const response = await fetch('http://localhost:5000/getPersonInfo', {
         method: 'GET',
         headers: {
           'Content-Type': 'application/json',

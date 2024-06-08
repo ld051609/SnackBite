@@ -8,7 +8,7 @@ const About = () => {
   const [allSnacks, setAllSnacks] = useState([]); 
   const fetchAllSnacks = async () => {
     try {
-      const res = await fetch('https://localhost:5000/snacks');
+      const res = await fetch('http://localhost:5000/api/snacks');
       const jsonData = await res.json(); 
       setAllSnacks(jsonData);
       console.log(jsonData);
