@@ -8,6 +8,8 @@ const PORT = 5000
 const connectDB = require('./config/db');
 const cookieParser = require('cookie-parser');
 const authRoute = require('./routes/AuthRoute');
+const reviewRoutes = require('./routes/ReviewRoute');
+const snackRoutes = require('./routes/SnackRoute');
 app.use(cors())
 
 // MongoDB connection
@@ -28,4 +30,6 @@ app.use(
 app.use(cookieParser());
 app.use(express.json());
 app.use("/", authRoute);
+app.use('/api/reviews', reviewRoutes);
+app.use('/api/snacks', snackRoutes);
 
