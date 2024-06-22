@@ -1,7 +1,7 @@
-import React from 'react'
+import {React, useState} from 'react'
 import {Link, useNavigate} from 'react-router-dom'
 import {ToastContainer, toast} from 'react-toastify'
-
+import styles from './form.module.css'
 const Signup = () => {
     const navigate = useNavigate();
     const [inputValue, setInputValue] = useState({
@@ -56,42 +56,48 @@ const Signup = () => {
             });
           };
   return (
-    <div className='form-container'>
-        <h2>Signup Account</h2>
-        <form onSubmit={handleSubmit}>
-            <div>
-                <label htmlFor="email">Email</label>
+    <div className={styles.container}>
+        <h2>Signup Form</h2>
+        <form onSubmit={handleSubmit} className={styles.form}>
+            <div className={styles.formInput}>
+                <label htmlFor="email" className={styles.label}>Email</label>
                 <input 
                     type="email" 
                     name='email' 
                     value={email} 
                     placeholder='Enter your email' 
                     onChange={handleOnChange}
-                    required/>
+                    required
+                    className={styles.input}
+                    />
             </div>
-            <div>
-                <label htmlFor="username">Username</label>
+            <div className={styles.formInput}>
+                <label htmlFor="username" className={styles.label}>Username</label>
                 <input 
                     type="text" 
                     name='username' 
                     value={username} 
                     placeholder='Enter your username' 
                     onChange={handleOnChange}
-                    required/>
+                    required
+                    className={styles.input}
+                    />
             </div>
-            <div>
-                <label htmlFor="password">Password</label>
+            <div className={styles.formInput}>
+                <label htmlFor="password" className={styles.label}>Password</label>
                 <input 
                     type="password" 
                     name='password' 
                     value={password} 
                     placeholder='Enter your password' 
                     onChange={handleOnChange}
-                    required/>
+                    required
+                    className={styles.input}
+                />
             </div>
-            <button type='submit'>Submit</button>
+            <button type='submit' className={styles.btn1}>Sign up</button>
             <span>
-                Already have an account? <Link to='/login'>Login</Link>
+                Already have an account? <Link to='/login' className={styles.btn2}>Login</Link>
             </span>
         </form>
         <ToastContainer />

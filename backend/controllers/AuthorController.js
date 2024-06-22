@@ -51,7 +51,12 @@ module.exports.Login = async (req, res, next) => {
 
 module.exports.getPersonInfo = async (req, res, next) => {
     try {
-        const user = await User.findById(req.user._id);
+        const userId = req.body.userId;
+        const user = await User.findOne({ _id: userId });
+        if(!user) {
+            return res.status(400).json({ message: 'User not found' });
+        }
+        console.log(user);
         res.status(200).json({ message: 'User fetched successfully', success: true, user });
         next();
     } catch (error) {

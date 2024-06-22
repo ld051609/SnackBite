@@ -5,7 +5,7 @@ const jwt = require("jsonwebtoken");
 module.exports.userVerification = async (req, res, next) => {
     const token = req.cookies.token;
     if (!token) {
-        return res.json({ message: "U dser not authenticated" , status: false});
+        return res.json({ message: "User not authenticated" , status: false});
     }
     jwt.verify(token, process.env.TOKEN_KEY, async (err, data) => {
         if (err) {

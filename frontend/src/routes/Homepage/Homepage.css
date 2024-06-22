@@ -17,22 +17,43 @@ img {
     font-size: 18px;
     text-align: center;
 }
-.subcontainer1, .subcontainer2{
+.subcontainer1{
     display: flex;
     justify-content: center;
     align-items: center;
     gap: 15px;
+    flex-direction: column;
+    margin: 20px 0;
 }
-.login-btn, .signup-btn{
+.subcontainer2{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 3px;
+    margin: 20px 0;
+
+}
+.login-btn{
     background-color: transparent;
     padding: 10px 25px;
     cursor: pointer;
     font-weight: bolder;
+    transition: ease 0.2s;
 }
+.login-btn:hover{
+    background-color: rgb(81, 7, 7);
+    color: white;
+}
+
 
 .signup-btn{
     background-color: transparent;
-    padding: 10px 25px;
     cursor: pointer;
     font-weight: bolder;
+    border-color: transparent;
+    text-decoration: underline;
+    color: black;
+}
+.signup-btn:hover{
+    color: rgb(81, 7, 7);
 }

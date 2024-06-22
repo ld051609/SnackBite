@@ -1,0 +1,62 @@
+[
+    {
+        "username": "6661e981739404cb7581c7a7",  
+        "snack": "667658866e779e6df20d59db",
+        "rating": 5,
+        "comment": "Absolutely delicious! Love the plum flavor."
+    },
+    {
+        "username": "6661e9dc739404cb7581c7ab",  
+        "snack": "667658866e779e6df20d59de",
+        "rating": 3,
+        "comment": "Tangy and refreshing, but a bit too sour for my taste."
+    },
+    {
+        "username": "6661eaee8d08529f1e6d5f1b",  
+        "snack": "667658866e779e6df20d59de",
+        "rating": 5,
+        "comment": "Creamy and delicious. Reminds me of childhood!"
+    },
+    {
+        "username": "6661eb594e32d8730a9f15ec",  
+        "snack": "667658866e779e6df20d59db",
+        "rating": 1,
+        "comment": "Disappointing. The yogurt flavor tastes artificial."
+    },
+    {
+        "username": "6661eb774e32d8730a9f15ef",  
+        "snack": "667658866e779e6df20d59dc",
+        "rating": 4,
+        "comment": "Classic creamy taste, always a favorite."
+    },
+    {
+        "username": "667004dcd79128e612447e7a",  
+        "snack": "667658866e779e6df20d59dc",
+        "rating": 4,
+        "comment": "Surprisingly good! The prune flavor is subtle yet enjoyable."
+    },
+    {
+        "username": "667004a5d79128e612447e76",  
+        "snack": "667658866e779e6df20d59e4",
+        "rating": 1,
+        "comment": "Awful. The matcha flavor is overpowering and bitter."
+    },
+    {
+        "username": "66700293d79128e612447e70",  
+        "snack": "667658866e779e6df20d59e4",
+        "rating": 1,
+        "comment": "Too sweet and artificial. Not recommended."
+    },
+    {
+        "username": "66700502d79128e612447e7d",  
+        "snack": "667658866e779e6df20d59e4",
+        "rating": 1,
+        "comment": "Bland and tasteless. Disappointed with the flavor."
+    },
+    {
+        "username": "667006922b1c50553046a430",  
+        "snack": "667658866e779e6df20d59e4",
+        "rating": 1,
+        "comment": "Weird texture and artificial matcha taste."
+    }
+]

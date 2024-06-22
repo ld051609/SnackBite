@@ -1,7 +1,8 @@
-import React from 'react'
+import {React, useState} from 'react'
 import { Link, useNavigate } from 'react-router-dom'
 import axios from 'axios'
 import {ToastContainer, toast} from 'react-toastify'
+import styles from './form.module.css'
 const Login = () => {
   const navigate = useNavigate();
   const [inputValue, setInputValue] = useState({
@@ -55,31 +56,36 @@ const Login = () => {
     });
   };
   return (
-    <div className='form-container'>
-      <h2>Login Account</h2>
-      <form onSubmit={handleSubmit}>
-        <div>
-          <label htmlFor="email">Email</label>
+    <div className={styles.container}>
+      <h2>Login Form</h2>
+      <form onSubmit={handleSubmit} className={styles.form}>
+        <div className={styles.formInput}>
+          <label htmlFor="email" className={styles.label}>Email</label>
           <input
             type="email"
             name="email"
             value={email}
             onChange={handleOnChange}
             required
+            placeholder='Enter email'
+            className={styles.input}
           />
         </div>
-        <div>
-          <label htmlFor="password">Password</label>
+        <div className={styles.formInput}>
+          <label htmlFor="password" className={styles.label}>Password</label>
           <input
             type="password"
             name="password"
             value={password}
             onChange={handleOnChange}
-            required/>
+            required
+            placeholder='Enter password'
+            className={styles.input}
+            />
         </div>
-          <button type='submit'>Submit</button>
-          <span>
-        Don't have an account? <Link to='/signup'>Sign up</Link>
+          <button type='submit' className={styles.btn1}>Login</button>
+          <span >
+        Don't have an account? <Link to='/signup' className={styles.btn2}>Sign up</Link>
         </span>
       </form>
       <ToastContainer />

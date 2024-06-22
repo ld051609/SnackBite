@@ -3,12 +3,11 @@ import './About.css'
 import NavBar from '../../components/NavBar/NavBar'
 import Searchbar from '../../components/Searchbar/Searchbar'
 import SnackCard from '../../components/SnackCard/SnackCard'
-import Snacks from './sample.json'
 const About = () => {
   const [allSnacks, setAllSnacks] = useState([]); 
   const fetchAllSnacks = async () => {
     try {
-      const res = await fetch('http://localhost:5000/api/snacks');
+      const res = await fetch('http://localhost:5000/snacks');
       const jsonData = await res.json(); 
       setAllSnacks(jsonData);
       console.log(jsonData);
@@ -20,9 +19,7 @@ const About = () => {
   useEffect(() => {
     fetchAllSnacks();
   }, []);
-  useEffect(() =>{
-    setAllSnacks(Snacks);
-  },[])
+
   return (
     <div>
       <NavBar/>

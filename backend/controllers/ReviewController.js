@@ -16,14 +16,16 @@ module.exports.Review = async (req, res, next) => {
 // get all reviews
 module.exports.FetchReviews = async (req, res, next) => {
     try {
-        const {snackName} = req.body;
-        const reviews = await Review.find(snackName);
+        const snackId = req.body.snackId;
+        console.log(`Snack ID server: ${snackId}`);
+        const reviews = await Review.find({ snack: snackId })
         if(!reviews) {
             res
             .status(404)
             .json({message: `Reviews not found for ${snackName}`, success: false});
             next();
         }
+        console.log(reviews);
 
         res
         .status(200)

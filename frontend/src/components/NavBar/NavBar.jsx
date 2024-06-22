@@ -15,7 +15,7 @@ const NavBar = () => {
   return (
     <header>
       <div className='logo'>
-      <h1>SnackBit</h1>
+      <h1>SnackBite</h1>
       </div>
 
       <div>
